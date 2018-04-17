@@ -5,7 +5,8 @@ import math
 _SpO2Calculator___CALCULATE_EVERY_N_BEATS = 3
 _SpO2Calculator___SPO2LUT = [100,100,100,100,99,99,99,99,99,99,98,98,98,98,
                              98,97,97,97,97,97,97,96,96,96,96,96,96,95,95,
-                             95,95,95,95,94,94,94,94,94,93,93,93,93,93]
+                             95,95,95,95,94,94,94,94,94,93,93,93,93,93,93,93,
+                             92,92,92,92,91,91,90,90,90,90,89,89,89,89,88,87]
 
 class SpO2Calculator:
   def __init__(self):
@@ -27,7 +28,7 @@ class SpO2Calculator:
         self.reset()
         try:
           self.spO2 = ___SPO2LUT[index]
-        except e:
+        except Exception, e:
           print e
           print index
 
